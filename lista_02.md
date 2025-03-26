@@ -37,7 +37,6 @@ for (let j = 0; j < valores.length; j++) {
 
 console.log("O produto dos valores é:", produto);
 
-
 ```
 Qual das seguintes alternativas melhor descreve o que o código faz?
 
@@ -49,7 +48,9 @@ C) O código avalia a expressão booleana, imprime `true` e, em seguida, verific
 
 D) O código avalia a expressão booleana, imprime `false` e ordena os valores em ordem crescente.
 
-
+A alternativa correta é a letra A.
+Na primeira parte do código, o console.log (resultado) imprime a avaliação booleana da variável, e como todas elas são true, ou seja, true (1 === 1) && true (12 > 10) || true (9 < 10), o console.log imprime true.
+Já na segunda parte do código, há um array com valores que estão sendo multiplicados entre si, ao final, o resultado da multiplicação é 29160, e esse valor será impresso no console.log ("O produto dos valores é:", produto).
 ______
 
 **2)** O código a seguir contém duas funções que calculam o limite de crédito de um cliente com base nos seus gastos e na renda mensal.
@@ -110,6 +111,9 @@ B) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -60
 C) analisarCredito1() exibirá: 'Seu crédito foi negado. Saldo disponível: -200.', enquanto analisarCredito2() exibirá: 'Seu crédito foi aprovado. Saldo disponível: 100.'
 
 D) Ambas as funções exibirão: 'Seu crédito foi aprovado Saldo disponível: 500.'
+
+A alternativa correta é a letra A.
+Ambas as funções calculam corretamente o que se espera, por esse motivo, ambas imprimem o mesmo console.log, ou seja, 'Seu crédito foi aprovado. Saldo disponível: 400.', uma vez que o saldo é > 0 e a soma da compra resulta em 4600, sobrando 400 reais de saldo.
 ______
 
 **3)** Considere o seguinte trecho de código em JavaScript:
@@ -134,6 +138,9 @@ B) O código verifica se a idade pertence à faixa adulta. Se for, exibe "Você 
 C) O código verifica se a idade está entre 18 e 60 anos e, se for, imprime "Você é um adulto!". Se não estiver nesse intervalo, imprime "Você está na melhor idade!".
 
 D) O código verifica se a idade é menor de 18, entre 18 e 60 ou acima de 60, imprimindo uma mensagem específica para cada caso.
+
+A alternativa correta é a letra B.
+Um vez que, dentro do if, não há mais verificações após uma condição ser verdadeira.
 ______
 
 **4)** Qual será o resultado impresso no console após a execução do seguinte código?
@@ -203,6 +210,9 @@ Dispositivo 4 não pode ser ligado. Energia insuficiente.
 
 Dispositivo 5 não pode ser ligado. Energia insuficiente.
 
+A alternativa correta é a letra D.
+Os dispositivos e suas baterias restantes foram calculadas com base no consumo de cada dispositivo.
+Porém, acredito que o dispositivo 4 pode ser ligado e a energia restante seria igual a 0.
 ______
 
 **5)** Qual é a principal função do método update() em um jogo desenvolvido com Phaser.js?
@@ -216,6 +226,9 @@ B) O método update() é chamado continuamente a cada quadro (frame) do jogo, se
 C) O método update() renderiza todos os sprites na tela e garante que a física do jogo seja processada corretamente.
 
 D) O método update() é chamado apenas uma vez após a criação da cena, sendo utilizado para configurar variáveis iniciais do jogo.
+
+A alternativa correta é a letra B.
+A função update serve para atualizar em loop as coisas do jogo.
 ______
 
 **6)** Qual é o principal objetivo do módulo Matter.js Physics em Phaser.js?
@@ -230,6 +243,8 @@ C) Renderizar gráficos otimizados para jogos 2D e garantir uma taxa de quadros 
 
 D) Criar animações automáticas para sprites e objetos interativos sem necessidade de programação de movimentação.
 
+A alternativa correta é a letra A.
+Ele é responsável pela física do jogo, tornando-o mais realista.
 ______
 
 # Questões dissertativas
@@ -245,6 +260,19 @@ Pedidos entre R$50,00 e R$199,99 (inclusive) → "Frete com custo adicional!"
 Pedidos de R$200,00 ou mais → "Frete grátis!"
 ```
 Implemente um pseudocódigo que receba o valor total da compra e exiba a classificação correta do frete para o cliente.
+
+```javascript
+var total = 100;
+
+if (total < 50){
+    console.log("Frete não disponível!");
+} else if (total >= 50 && total <= 199.99){
+    console.log("Frete com custo adicional!");
+} else {
+    console.log ("Frete grátis!");
+}
+```
+Tomei a liberdade de incluir que para o valor de 50 reais o frete também seria com custo adicional, uma vez que o exercício não abordou nada sobre o valor e, caso não o delimitasse, a saída seria "Frete grátis!", o que não faria sentido no contexto. 
 ______
 
 **8)** Considere a implementação da classe base Veiculo em um sistema de modelagem de veículos. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Carro e Moto, que herdam da classe Veiculo, adicionando atributos específicos e métodos para calcular o consumo de combustível de um carro e de uma moto, respectivamente.
