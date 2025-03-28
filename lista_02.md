@@ -342,7 +342,7 @@ Considere a fórumla de atualização velocidade:
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
 
-    // parâmetrosp
+    // parâmetros
     velocidadeInicial = "Digite a velocidade inicial da sonda (m/s):"
 
     desaceleracao = "Digite a taxa de desaceleração (m/s²):"
