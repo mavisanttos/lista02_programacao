@@ -290,6 +290,44 @@ Método CalcularConsumo():
 ```
 Implementação genérica para cálculo de consumo, a ser sobrescrita pelas subclasses.
 Agora, implemente as classes Carro e Moto, garantindo que ambas herdem de Veiculo e possuam métodos específicos para calcular o consumo de combustível com base na quilometragem e eficiência do veículo.
+
+```javascript
+// classe veículo
+class Veiculo {
+    constructor(modelo, ano) {
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+
+    calcularConsumo(distancia, eficiencia) {
+        return 0;
+    }
+}
+
+// classe carro
+class Carro extends Veiculo {
+    constructor(modelo, ano, quilometragem) {
+        super(modelo, ano);
+        this.quilometragem = quilometragem;
+    }
+
+    calcularConsumo(distancia, eficiencia) {
+        return distancia / eficiencia; // consumo
+    }
+}
+
+// Classe Moto
+class Moto extends Veiculo {
+    constructor(modelo, ano, km) {
+        super(modelo, ano);
+        this.km = km;
+    }
+
+    calcularConsumo(distancia, eficiencia) {
+        return distancia / eficiencia; // consumo
+    }
+}
+```
 ______
 
 **9)** Você é um cientista da NASA e está ajudando no desenvolvimento de um sistema de pouso para sondas espaciais em Marte. Seu objetivo é calcular o tempo necessário para que a sonda reduza sua velocidade até um nível seguro para pouso, considerando uma velocidade inicial de entrada na atmosfera marciana e uma taxa de desaceleração constante causada pelo atrito atmosférico e retrofoguetes.
@@ -303,6 +341,33 @@ Considere a fórumla de atualização velocidade:
     velocidade = velocidadeInicial - desaceleracao * tempo
 ```
 Seu programa deve determinar quanto tempo será necessário para que a sonda atinja uma velocidade segura de pouso, sem ultrapassar os limites estabelecidos.
+
+    // parâmetrosp
+    velocidadeInicial = "Digite a velocidade inicial da sonda (m/s):"
+
+    desaceleracao = "Digite a taxa de desaceleração (m/s²):"
+
+    velocidadeSegura = "Digite a velocidade segura para pouso (m/s):"
+
+    tempoMaximo = "Digite o tempo máximo permitido para a descida (s):"
+
+    // contagem tempo 
+    tempo =0
+
+    // verifica se a desaceleração
+    Se desaceleracao <= 0 Então
+        Escreva "Erro: A desaceleração deve ser maior que zero."
+        Pare
+
+    // tempo necessário para atingir a velocidade segura
+    tempoNecessario = (velocidadeInicial - velocidadeSegura) / desaceleracao
+
+    // verifica se o tempo necessário está dentro do limite permitido
+    Se tempoNecessario > tempoMaximo Então
+        Escreva "Aviso: Tempo necessário excede o limite máximo permitido."
+        Escreva "Ajuste a desaceleração ou reveja os parâmetros da missão."
+    Senão
+        Escreva "Tempo necessário para pouso seguro: ", tempoNecessario, " segundos."
 ______
 
 **10)** Em um sistema de análise financeira, as operações de investimento de uma empresa podem ser representadas por matrizes, onde cada linha representa um tipo de investimento e cada coluna representa um período de tempo.
